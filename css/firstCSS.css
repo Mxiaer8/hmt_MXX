@@ -1,0 +1,304 @@
+*{
+	margin:0;
+	padding:0;	
+}
+body{
+	border-top:2px solid #F32D51;
+	border-bottom:2px solid #F32D51;
+	 height:100%;
+	
+	font-family:"Microsoft YaHei","SimSun";
+}
+
+img{
+	border:none;
+}
+/*导航栏部分*/
+.top{
+	position:relative;
+	height:9%;
+	margin-left:10%;
+	margin-right:20%;
+	padding:1%;
+}
+.top>a{
+	position:relative; /*需先设置*/
+	height:100%;
+	display:inline-block;
+	overflow:hidden;
+	
+}
+.top .light{
+	position:absolute;
+	height:100%;
+	width:30%;
+	top:0;
+	left:-30%;
+	background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));/*颜色渐变效果*/
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+	transform: skewx(-25deg);
+    -o-transform: skewx(-25deg);
+    -moz-transform: skewx(-25deg);
+    -webkit-transform: skewx(-25deg);/*倾斜25度*/
+    z-index: 2;
+    transition:left 0.5s linear;
+}
+.top>a:hover .light{
+	left:130%;
+}
+.top ul{
+	list-style:none;
+	height:100%;
+	float:right;
+	width:auto;
+}
+.top ul li{
+	display:inline-block;
+	margin:15px 26px 5px 0;
+}
+.top ul li a{
+	color:#999;
+	display:block;
+	text-decoration:none;
+	font-size:1.2em;
+}
+.top ul li a:hover,.top ul li a.active{
+	color:#6A6A6A;
+	font-weight:bold;
+}
+/*页头部分*/
+.middle{
+	overflow:hidden;
+	width:80%;
+	background:url(../image/middle-bg.jpg) 0 0 no-repeat;
+	background-size:100% 100%;
+	color:#fff;
+	padding:10% 10%;
+}
+.left{
+	float:left;
+	width:46%;
+	margin-right:4%;
+}
+.left p{
+	margin:10% 0;
+	font-size:1.1rem;
+}
+.left h1{
+	font-size:2.5rem;
+}
+.join{
+	margin:10% 0;
+	font-size:1.1rem;
+}
+.join a{
+	color: #fff;
+    	text-decoration: none;
+}
+.join img{
+	width:25px;
+	height:23px;
+	display:inline-block;
+	vertical-align:top;
+}
+.right{
+	position:relative;
+	float:left;
+	width:46%;
+	height:auto;
+	
+}
+.right img{
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+	width:85px;
+	height:85px;
+	z-index: 100;
+	cursor: pointer;
+	transition:all 0.3s;
+	
+	
+}
+.right img:hover{
+	-transform:scale(1.25,1.25);
+	-webkit-transform:scale(1.25,1.25); /* Safari */
+    	-moz-transform:scale(1.25,1.25);
+}
+.right video{
+	width:100%;
+	height:100%;
+	object-fit: contain;
+	
+}
+
+/*页中部分*/
+.middle-bottom{
+	text-align:center;
+	width:80%;
+	margin:0 10%;
+}
+h2{
+	font-size:1.5em;
+	font-weight:bold;
+	color:#666;
+	letter-spacing:20px;
+	margin-bottom:20px;
+}
+.product{
+	width:100%;
+	
+}
+
+
+.product-image{
+	position:relative;
+	width:20%;
+	height:200px;
+	display:inline-block;
+	margin-left:2%;
+	margin-right:2%;
+	margin-top:1%;
+	margin-bottom:1%;
+	
+}
+.product img{
+	cursor: pointer;
+	width:100%;
+	height:100%;
+}
+.mask{
+	width:100%;
+	height:100%;
+	position:absolute;	
+	background-color: black;
+	opacity: 0.7;
+	top:0;
+	left:0;
+	display:none;
+	
+}
+.white{
+	width:150px;
+	height:60px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left: -75px;
+        margin-top: -30px; 
+	background-color:white;
+}
+.black {
+    	width: 140px;
+   	height: 50px;
+    	position: absolute;
+    	left: 50%;
+    	top: 50%;
+    	margin-left: -70px;
+    	margin-top: -25px;
+    	background-color: black;
+    	text-align:center;
+    	color:white;
+}
+.black p{
+	padding-top:10%;
+
+}
+.product-image:hover .mask{
+	display:block;
+}
+/*小按钮*/
+.returnTop{
+	right:10px;
+	bottom:20px;
+	position:fixed;
+}
+.returnTop img{
+	opacity: 0.5;
+}
+.right video{
+	object-fit: contain;
+}
+
+
+
+
+
+
+
+/*网页尾部分*/
+.bottom{
+	
+	margin:20px 5% 20px 5%;
+	text-align:center;
+	clear:both;
+	color:#666;
+}
+.bottom a{
+	color:#666;
+}
+#returnTop{
+	cursor:pointer;
+	bottom: 20px;
+    right: 10px;
+    position: fixed;
+}
+
+/*自适应屏幕部分*/
+@media screen and(max-width: 500px){
+	.top{
+		margin:0;
+	}
+	.top a{
+		width:100%;
+	}
+	.top a img{
+		max-width:204px;
+		max-height:43px;
+		display:block;
+		margin:0 auto;
+	}
+	.top ul{
+		display:block;
+		width:100px;
+		margin:0 auto;
+		text-align:center;
+		font-size:1em;
+	}
+	.top ul li{
+		margin:0px 10px 5px 0;
+	}
+	
+}
+
+@media screen and (max-width: 768px) {
+  .left{width:100%;margin-right: 0;}
+  .right{width:100%;margin-left: 0;}
+}
+
+@media screen and (max-width: 800px) {
+  .product-image{
+	width:100%;
+  }
+  .mask{
+	display:block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
