@@ -13,7 +13,8 @@
     bottom: 0px;
     left: 0;
     width: 10%;
-    background: rgba(0,0,0,.1);
+    background-color:transparent;
+	cursor:pointer;
 }
 #next{
 	height:100%;
@@ -21,7 +22,8 @@
     bottom: 0px;
     right: 0;
     width: 10%;
-    background: rgba(0,0,0,.1);
+    background-color:transparent;
+	cursor:pointer;
 }
 .container{
 	overflow:hidden;
@@ -42,4 +44,110 @@
 	height:100%;
 	
 }
- 
+
+.mask-3-1{
+	position:absolute;
+	width:100%;
+	left:0%;
+	bottom:0;
+	height:40%;
+	display:none;
+	background-color:#e99c7e;
+	opacity:0.8;
+	/*transform:rotate(-50deg);
+	-ms-transform:rotate(-50deg); /* IE 9 */
+	/*-webkit-transform:rotate(-50deg); /* Safari and Chrome */
+}
+.mask-3-2{
+	position:absolute;
+	width:100%;
+	left:0%;
+	bottom:0;
+	height:40%;
+	display:none;
+	background-color:#e1ccae;
+	opacity:0.8;
+	/*transform:rotate(-50deg);
+	-ms-transform:rotate(-50deg); /* IE 9 */
+	/*-webkit-transform:rotate(-50deg); /* Safari and Chrome */
+}
+.mask-3-3{
+	position:absolute;
+	width:100%;
+	left:0%;
+	bottom:0;
+	height:40%;
+	display:none;
+	background-color:#adc5cd;
+	opacity:0.8;
+	/*transform:rotate(-50deg);
+	-ms-transform:rotate(-50deg); /* IE 9 */
+	/*-webkit-transform:rotate(-50deg); /* Safari and Chrome */
+}
+.mask-3-4{
+	position:absolute;
+	width:100%;
+	left:0%;
+	bottom:0;
+	height:40%;
+	display:none;
+	background-color:#cbc6c3;
+	opacity:0.8;
+	/*transform:rotate(-50deg);
+	-ms-transform:rotate(-50deg); /* IE 9 */
+	/*-webkit-transform:rotate(-50deg); /* Safari and Chrome */
+}
+.mask-content{
+	/*transform:rotate(40deg);
+	-ms-transform:rotate(40deg); /* IE 9 */
+	/*-webkit-transform:rotate(40deg); /* Safari and Chrome */
+	display:none;
+	margin-left:30%;
+	margin-top:2%;
+	width:40%;
+	text-align:center;
+}
+.mask-content h2{
+	font-size:3rem;
+	letter-spacing:0;
+	color:#fff;
+}
+.mask-content p{
+	font-size:1.2rem;
+	letter-spacing:0;
+	color:#fff;
+}
+
+/*自适应屏幕*/
+@media screen and (max-width: 1650px){
+	.mask-content{
+		width:50%;
+		margin-left:25%;
+		
+	}
+}
+@media screen and (max-width: 1340px){
+	.mask-content{
+		width:80%;
+		margin-left:10%;
+		
+	}
+}
+@media screen and (max-width: 800px){
+	.mask-content h2{
+		font-size:1.3rem;
+	}
+	.mask-content{
+		width:100%;
+		margin-left:0;
+		height:22rem;
+	}
+}
+@media screen and (max-width: 575px){
+	.mask-content{
+		width:100%;
+		margin-left:0;
+		height:22rem;
+		overflow-y:scroll;
+	}
+}
